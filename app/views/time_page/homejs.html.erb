@@ -1,0 +1,31 @@
+<html>
+<head>
+
+<Title>Time_app</Title>
+</br>
+</br>
+<h1>*** Time application(js) ***</h1>
+</head>
+<body onload="clock();" backgroud="wallpaper.jpg">
+
+<script type="text/javascript">
+function clock() {
+   var now = new Date();
+    var hours   = now.getHours();
+    var minutes = now.getMinutes();
+    var seconds = now.getSeconds()
+   if (hours   < 10) {hours   = "0"+hours;}
+    if (minutes < 10) {minutes = "0"+minutes;}
+    if (seconds < 10) {seconds = "0"+seconds;}
+   var outStr = hours+':'+minutes+':'+seconds;
+   document.getElementById('clockDiv').innerHTML=outStr;
+   setTimeout('clock()',1000);
+}
+clock();
+</script>   
+<p>Local time</p>
+<p><div id="clockDiv"></div></p>
+
+</body>
+</html>
+

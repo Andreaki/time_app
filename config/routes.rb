@@ -1,5 +1,6 @@
 TimeApp::Application.routes.draw do
-  get "time_page/home"
+  get "time_page/home" 
+  get "time_page/homejs"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
